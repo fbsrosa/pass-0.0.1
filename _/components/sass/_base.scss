@@ -1,0 +1,16 @@
+body {
+	height: 100vh;
+  	width:98vw;
+	} /* body */
+
+.navigation {
+	ul {
+		li {
+			list-style: none;
+			display: inline;
+				a{
+				text-decoration: none;
+				} /* a */ 
+		} /* li */
+} /* ul */
+} /* navigation */

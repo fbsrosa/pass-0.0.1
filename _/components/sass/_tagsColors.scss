@@ -1,0 +1,11 @@
+@import "_colors.scss";
+
+.navigation {
+	a{
+	color: $blue;
+		&:hover {
+		background-color: $blue;
+		color: $white;
+		} /* hover */
+	} /* a */ 
+} /* navigation */

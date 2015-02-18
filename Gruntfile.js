@@ -2,7 +2,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-compass');
-    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.initConfig({
             
             uglify: {
@@ -20,14 +19,6 @@ module.exports = function(grunt) {
                     } //options
                 } // dev
             }, // compass
-
-            autoprefixer: {
-                dev: {
-                    files: {
-                        '_/styles.css': ['_/components/sass/*.scss']
-                    } //files
-                } // dev
-            }, // autoprefixer
             
             watch : {
                 options: {livereload: true},
@@ -43,12 +34,7 @@ module.exports = function(grunt) {
 
                 html: {
                     files: ['*.html']
-                }, // html
-
-                styles: {
-                files: ['_/components/sass/*.scss'],
-                tasks: ['autoprefixer:dev']
-            }             
+                } // html
             } // watch
 
     }) //initConfig

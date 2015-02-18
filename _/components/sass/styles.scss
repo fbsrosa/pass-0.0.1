@@ -1,21 +1,2 @@
-$liBlue: 	#3be;
-$blue: 		#09c;
-$liPurple:	#a6c;
-$purple: 	#93c;
-$liGreen: 	#9c0;
-$green: 	#690;
-$liYellow:	#fb3;
-$yellow:	#f80;
-$liRed:		#f44;
-$red:		#c00;
-
-$black:		#000;
-$gray:		#777;
-$white:		#fff;
-
-body {
-	height: 100vh;
-	background: linear-gradient(to top, $purple, $blue);
-  	width: calc(98vw - 1em);
-	}
-
+@import "_base.scss";
+@import "_tagsColors.scss"
