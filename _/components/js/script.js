@@ -100,6 +100,6 @@ var pixGrid = function() {
 function copy(){
 	var now = new Date();
 	var year = now.getFullYear();
-	document.write ("&nbsp;&copy;"+year+"&nbsp;Fernando Bezerra Santa Rosa");
+	document.write ("Copyright&nbsp;Fernando&nbsp;Bezerra&nbsp;Santa&nbsp;Rosa&nbsp;&copy;"+year);
 }
 
