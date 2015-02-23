@@ -1,15 +1,13 @@
-@import "_colors.scss";
-
 .navigation {
 	a{
 	color: $blue;
 		&:hover {
-		background-color: $blue;
+		background-color: rgba($blue,.7);
 		color: $white;
 		} /* hover */
 	} /* a */ 
 } /* navigation */
 
 .credits {
-	background-color: $grayLi;
+	background-color: rgba($blue,.1);
 }
