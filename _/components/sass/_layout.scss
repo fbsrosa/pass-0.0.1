@@ -7,14 +7,28 @@ $grid-padding		: $gutter-width;
 
 @include border-box-sizing;
 
-$small				: 30em;
-$medium				: 47em;
-$large				: 75em;
+$small:30em;
+$medium:47em;
+$large:75em;
 
 // Layout ---------------------
 
 .layout {
+	@include container;
 	padding: 3%;
+
+	.primary {
+		margin-top: .2em;
+		@include susy-breakpoint($medium) {
+			@include span(8 of 12);
+			}
+			.secondary {
+			@include susy-breakpoint($medium) { 
+				@include span(4 of 12);
+			}			
+		}
+	}
+		
 }
 
 // Header ---------------------
@@ -35,7 +49,7 @@ header {
 		li {
 		i {
 		color: lighten($purple, 30);
-		padding-right: 0.5em;
+		padding-right: 0.8em;
 		}
 		a{
 		display: block;
