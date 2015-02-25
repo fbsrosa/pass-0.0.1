@@ -1,30 +1,29 @@
 @import url('http://fonts.googleapis.com/css?family=Montserrat|Playfair+Display:700');
-
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 body {
 	height: 100vh;
   	width:98vw;
+  	font-family: $font-primary;
+  	font-size: .9rem;
+  	line-height: 120%;
+  	background-color: #103;
+	color: #09c;
 	}
-
-.navigation {
-	ul {
-		li {
-			list-style: none;
-			display: inline;
-				a{
-				text-decoration: none;
-				} 
-		} 
-} 
-} 
-
-.credits {
-	ul {
-		li {
-			list-style: none;
-			display: inline;
-				a{
-				text-decoration: none;
-				} 
-		} 
+#{headings()} {
+	font-family: $font-primary;
+	font-style: normal;
+	@include text-shadow($purple 1px 1px);
 }
+h1 {
+	font-size: 2rem;
+	color: darken($blueLi, 25);
+	border-bottom: 1px solid $blue;
+	padding-bottom: 1rem;
+	padding-top: 0.4rem;
+	margin-bottom: 0.4rem;
+}
+h3 {
+  	line-height: 100%;
+  	font-size: 1.3rem;
+  	color: darken($blueLi, 25);
 }
