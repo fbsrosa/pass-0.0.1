@@ -1,5 +1,8 @@
 // Susy setups ---------------
 
+@import "susyone";
+
+
 $susy: (
 	gutter-position: after,
 	container: auto,
@@ -17,50 +20,80 @@ $large:75em;
 
 // Header ---------------------
 
+header {
+
+.hero {
+	width:100vw;
+	@include susy-breakpoint($medium) {
+		// @include single-transition(all, 0.5s, ease-out);
+		position: relative;
+		display: block;
+		width: 100vw;
+		height: 450px;
+		@include background (linear-gradient(right, rgba($white, 0.5), rgba($white, 0)), image-url("me.2015.02.19.png"));
+		// background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		webkit-background-size: cover;
+		moz-background-size: cover;
+		o-background-size: cover;
+		z-index: 0;
+		// margin: 0 auto;
+	}
+} // hero	
+
 .nav {
 	width: 100vw;
+	margin-top: -1vh;
 	height: auto;
 	position: fixed;
 	background-color: rgba($black,.7);
-	}
-		
+	z-index: 5;
+	
 .branding {
 
 	img {
-		width: 95vw;
+		width: 90vw;
+		position: center center;
 		@include susy-breakpoint($medium) {
-		@include span(4 of 8); 
-		margin-left:  span(2 wide of 8);
-	}
-	}
-}
+		@include span(6 of 8);
+		margin-left:  span(1 wide of 8);		
+		}
+	} //  img
+} // branding
 
 .navlist {	
+
+		@include susy-breakpoint($small) { 
+			@include horizontal-list;
+		}		
 		@include susy-breakpoint($medium) { 
-			text-align: center;
-			padding-top: 0.5vh;
-			@include span(4 of 8);
+			@include span(6 of 8);
 			margin-left:  span(2 wide of 8);
 		}
-		li {
-		display: inline;
-		i {
-		color: lighten($purple, 30);
-		padding-right: 0.5vw;
-		}
+
+	li {
+		position: center center;
+		font-size: 0.85rem;
+			i {
+				color: lighten($purple, 30);
+				padding-right: 0.5vw;
+			} //  i
 		a{
-		text-decoration: none;
-		padding: 0.5vh 0.5vw;	
-		color: $blue;
-			&:hover {
-			background-color: rgba($blue,.7);
-			color: lighten($grayLi, 15);
-			}
-		}		
-		}
-}
+			text-decoration: none;
+			padding: 0.7vh 0.5vw;	
+			color: $blue;
 
-
+				&:hover {
+				background-color: rgba($blue,.7);
+				color: lighten($grayLi, 15);
+				}
+		} // a		
+	} //  li
+		
+		} // navlist
+	} // nav
+} // header
 
 // Layout ---------------------
 .sampleslist {
@@ -68,8 +101,12 @@ $large:75em;
 }
 
 .layout {
-	margin-left: 2vw;
-	margin-right: 2vw;
+	padding: 1.5vw;
+	@include susy-breakpoint($medium) { 
+	width: 80vw;
+	}
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .resume {
@@ -82,12 +119,15 @@ $large:75em;
 	@include susy-breakpoint($medium) {
 		@include span(6 of 8);
 	}
+	color: lighten($blue, 20);
 			
 }
 .secondary {
 	@include susy-breakpoint($medium) { 
 			@include span(2 omega of 8);
-		}			
+		}
+	font-size: 0.8rem;
+	color: $greenLi;				
 	}
 
 }
